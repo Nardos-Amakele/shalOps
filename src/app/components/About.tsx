@@ -1,16 +1,20 @@
-const About = () => {
-    return (
-      <section id="about" className="py-20 text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4 text-primary">About Us</h2>
-          <p className="text-lg leading-relaxed text-gray-700">
-            ShalOps is dedicated to delivering cutting-edge digital solutions that drive business success.
-            Our mission is to empower companies with innovative technology and creative design.
-          </p>
-        </div>
-      </section>
-    );
-  };
-  
-  export default About;
-  
+const AboutUs = () => {
+  return (
+    <section
+      id="about"
+      className="relative h-screen bg-black flex items-center justify-center z-20 rounded-t-[50%]"
+    >
+      <div className="max-w-4xl text-center">
+        <h2 className="text-5xl font-poppins font-bold text-[#894dff] mb-4">
+          About Us
+        </h2>
+        <p className="text-xl text-gray-700">
+          At ShalOps, we create seamless digital experiences. Our solutions empower businesses
+          through technology, helping them scale efficiently.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default AboutUs;

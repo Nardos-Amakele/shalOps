@@ -1,3 +1,4 @@
+import ParticlesBackground from './components/ParticlesBackground';
 import './globals.css';
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="font-poppins">{children}</body>
+      <body className="font-poppins">
+      <ParticlesBackground /> 
+        {children}</body>
     </html>
   );
 }
