@@ -29,7 +29,7 @@ const Hero = () => {
         onClick={scrollToAbout}
         className="mt-10 bg-[#894dff] text-white py-3 px-6 rounded-full flex items-center gap-2 text-lg transition"
       >
-        <RxArrowUp />
+        
       </button>
     </section>
   );
