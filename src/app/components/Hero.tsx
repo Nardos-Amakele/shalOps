@@ -1,36 +1,38 @@
 'use client'
+import Image from 'next/image';
+import Herosvg from '../../../public/hero.svg';
 
-import { RxArrowUp } from "react-icons/rx";
 const Hero = () => {
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
-    <section
-      id="hero"
-      className="relative py-20 text-center overflow-hidden h-[80vh] flex flex-col justify-center items-center"
-    >
-      {/* Hero content */}
-      <div className="relative z-10 max-w-7xl px-4 text-center">
-        <h1 className="text-7xl font-poppins font-bold text-black mb-4">
-          Welcome to Shal<span className="text-[#894dff]">Ops</span>
+    <section className="h-screen flex flex-col lg:flex-row mt-[5rem] justify-between px-8 md:px-16 lg:px-24 bg-[#f5f1fc] max-w-7xl mx-auto">
+      {/* Left Side */}
+      <div className="max-w-lg text-center lg:text-left">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          Bridging <br />
+          <span className="text-black">Business & Technology</span>
         </h1>
-        <p className="text-5xl font-bold text-[#894dff] mb-4">Your trusted partner</p>
-        <p className="text-lg text-gray-700 mb-8">
-          Bridging the gap between business and technology. Bring your ideas to life with us.
+        <p className="mt-4 text-gray-600 text-lg">
+          We create reliable business solutions tailored to your needs. By understanding your challenges, we build technology that streamlines operations, boosts growth, and drives success.
         </p>
+
+        {/* Input and Button */}
+        <div className="mt-6 flex flex-col md:flex-row gap-4">
+          <input
+            type="text"
+            placeholder="Type your email or Phone Number"
+            className="px-4 py-3 w-full md:w-auto rounded-lg border border-gray-300 bg-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <button className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90">
+            Get In Touch
+          </button>
+        </div>
       </div>
-      {/* Scroll button */}
-      <button
-        onClick={scrollToAbout}
-        className="mt-10 bg-[#894dff] text-white py-3 px-6 rounded-full flex items-center gap-2 text-lg transition"
-      >
-        
-      </button>
+
+      {/* Right Side */}
+      <div className="mt-10 lg:mt-0 lg:ml-16">
+        <Image src={Herosvg} width={300} height={300} alt="Illustration" />
+      </div>
     </section>
   );
 };

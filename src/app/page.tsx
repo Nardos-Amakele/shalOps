@@ -6,10 +6,12 @@ import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Promo from './components/Promo';
 
 export default function Home() {
   return (
     <>
+      <Promo />
       <Navbar />
       <main>
         <Hero />
