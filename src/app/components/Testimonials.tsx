@@ -11,7 +11,7 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ name, text }: { name: string; text: string }) => (
-  <div className="bg-[#F4F1F9] p-6 rounded-xl shadow-lg w-80 text-center">
+  <div className=" p-6 rounded-xl shadow-lg w-80 text-center">
     <div className="w-10 h-10 bg-[#8572AA] rounded-full mx-auto mb-4"></div>
     <h3 className="font-semibold">{name}</h3>
     <p className="text-gray-600 text-sm">{text}</p>
@@ -26,9 +26,9 @@ const TestimonialsSection = () => {
       <p className="text-center max-w-xl mb-8">
         We are a team of passionate innovators, problem-solvers, and technology enthusiasts dedicated to helping businesses thrive in the digital world.
       </p>
-      <div className="relative flex gap-8 overflow-hidden w-full max-w-5xl">
+      <div className="relative flex gap-8 overflow-hidden w-full max-w-5xl max-h-[40rem]">
         {/* Top fade gradient */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[] to-transparent z-10"></div>
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#f2eff8] to-transparent z-10"></div>
         
         {/* Content columns */}
         <div className="flex gap-8 relative">
@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
               className="flex flex-col gap-6"
               initial={{ y: offset }}
               animate={{ y: direction === 'up' ? -offset : -offset * 2 }}
-              transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
+              transition={{ repeat: Infinity, duration: 6, ease: "linear", repeatType: "loop" }}
             >
               {testimonials.map((testimonial) => (
                 <TestimonialCard key={testimonial.id} {...testimonial} />
@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Bottom fade gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[] to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f2eff8] to-transparent z-10"></div>
       </div>
     </section>
   );

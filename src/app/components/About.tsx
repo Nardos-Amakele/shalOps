@@ -7,7 +7,20 @@ import Gears from '../../../public/Group 33.svg'
 
 export default function AboutUs() {
   return (
-    <section className="bg-[#F4F1F9] min-h-screen flex flex-col items-center px-6 md:px-52 py-10  mx-auto max-w-7xl">
+    <section className="  min-h-screen flex flex-col items-center px-6 md:px-52 py-10  mx-auto max-w-7xl">
+   {/* <svg
+        className="absolute top-[60rem] left-[40rem] -translate-x-1/2 hidden md:block w-full h-full z-0"
+        viewBox="0 0 800 800"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M 402 963 C 158 754 1445 887 557 384 C -159 -18 601 -5 916 -231"
+          stroke="#6A5ACD"
+          strokeWidth="2"
+          fill="none"
+        />
+      </svg> */}
       <div className="">
         {/* WHO WE ARE */}
         <div className="flex flex-col md:flex-row justify-between items-center ">

@@ -5,7 +5,7 @@ import Herosvg from '../../../public/hero.svg';
 const Hero = () => {
 
   return (
-    <section className="h-screen flex flex-col lg:flex-row mt-[5rem] justify-between px-8 md:px-16 lg:px-24 bg-[#f5f1fc] max-w-7xl mx-auto">
+    <section className="h-screen flex flex-col lg:flex-row mt-[5rem] justify-between px-8 md:px-16 lg:px-24  max-w-7xl mx-auto">
       {/* Left Side */}
       <div className="max-w-lg text-center lg:text-left">
         <h1 className="text-4xl md:text-5xl font-bold leading-tight">
