@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="text-xl font-bold text-[#563589]">ShalOps</div>
 
         {/* Links */}
-        <div className="flex flex-col md:flex-row gap-10 mt-4 md:mt-0 text-sm">
+        <div className="flex flex-col md:flex-row gap-10 mt-4 md:mt-0 text-sm text-left">
           <div>
             <h4 className="font-semibold mb-2">Company</h4>
             <ul className="space-y-1">
