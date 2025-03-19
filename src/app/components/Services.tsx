@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import Research from "../../../public/research-presentation-svgrepo-com.svg";
-import Development from "../../../public/development-web-development-svgrepo-com (1).svg";
+import Research from "../../../public/research-presentation-svgrepo-com (1).svg";
+import Development from "../../../public/development-web-development-svgrepo-com (1) (1).svg";
 import Support from "../../../public/Group.svg";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -28,12 +28,36 @@ const content = [
     description:
       "We are a team of passionate innovators, problem-solvers, and technology enthusiasts dedicated to helping businesses thrive in the digital world.",
     icon: Support,
-    background: "#8233D7",
+    background: "#563589",
   },
   {
     title: "Digital Marketing",
     description:
       "We are a team of passionate innovators, problem-solvers, and technology enthusiasts dedicated to helping businesses thrive in the digital world.",
+    icon: Support,
+    background: "#563589",
+  },
+];
+
+const methods = [
+  {
+    title: "Research",
+    description:
+      "Our team of innovators dives deep into understanding your business needs, market trends, and user expectations to lay a strong foundation for your software product.",
+    icon: Research,
+    background: "#FFFFFF",
+  },
+  {
+    title: "Development",
+    description:
+      "Our skilled developers bring your vision to life, crafting robust, scalable, and user-friendly software solutions tailored to your business goals.",
+    icon: Development,
+    background: "#000000",
+  },
+  {
+    title: "Testing and Training",
+    description:
+      "We rigorously test your software to ensure flawless performance and provide comprehensive training to empower your team for seamless adoption.",
     icon: Support,
     background: "#563589",
   },
@@ -45,12 +69,12 @@ export default function Services() {
 
   const handleNext = () => {
     setPrevIndex(index);
-    setIndex((prev) => (prev + 1) % content.length);
+    setIndex((prev) => (prev + 1) % methods.length);
   };
 
   const handlePrev = () => {
     setPrevIndex(index);
-    setIndex((prev) => (prev - 1 + content.length) % content.length);
+    setIndex((prev) => (prev - 1 + methods.length) % methods.length);
   };
 
   return (
@@ -77,66 +101,112 @@ export default function Services() {
           ))}
         </div>
       </div>
-
-      {/* Right Section */}
       <div className="relative w-full md:w-1/3 min-h-[450px] md:min-h-[600px] flex items-center justify-center">
-        {/* Background  */}
+        {/* Background */}
         <motion.div
-          className="absolute inset-0 flex flex-col justify-between  p-6 md:p-10 w-full h-full"
-          style={{ backgroundColor: content[prevIndex].background }}
+          className="absolute inset-0 flex flex-col justify-between p-6 md:p-10 w-full h-full"
+          style={{ backgroundColor: methods[prevIndex].background }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-xl md:text-2xl uppercase mb-4 md:mb-6 text-white text-center">
+          <h3
+            className="text-xl md:text-2xl uppercase mb-4 md:mb-6 text-center"
+            style={{
+              color:
+                methods[prevIndex].background === "#FFFFFF"
+                  ? "#333333"
+                  : "#FFFFFF",
+            }}
+          >
             HOW WE DO THEM
           </h3>
           <div className="self-start">
             <Image
-              src={content[prevIndex].icon}
+              src={methods[prevIndex].icon}
               width={60}
               height={50}
-              alt={content[prevIndex].title}
+              alt={methods[prevIndex].title}
               className="mb-4 md:w-[80px] md:h-[60px]"
             />
           </div>
           <div className="mb-44">
-            <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-white">
-              {content[prevIndex].title}
+            <h2
+              className="text-xl md:text-2xl font-semibold mb-3 md:mb-4"
+              style={{
+                color:
+                  methods[prevIndex].background === "#FFFFFF"
+                    ? "#333333"
+                    : "#FFFFFF",
+              }}
+            >
+              {methods[prevIndex].title}
             </h2>
-            <p className="text-xs md:text-sm max-w-xs text-white">
-              {content[prevIndex].description}
+            <p
+              className="text-xs md:text-sm max-w-xs"
+              style={{
+                color:
+                  methods[prevIndex].background === "#FFFFFF"
+                    ? "#333333"
+                    : "#FFFFFF",
+              }}
+            >
+              {methods[prevIndex].description}
             </p>
           </div>
         </motion.div>
 
-        {/* Foreground  */}
+        {/* Foreground */}
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            className="absolute inset-0 flex flex-col justify-between  p-6 md:p-10 w-full h-full"
-            style={{ backgroundColor: content[index].background }}
+            className="absolute inset-0 flex flex-col justify-between p-6 md:p-10 w-full h-full"
+            style={{ backgroundColor: methods[index].background }}
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <h3 className="text-xl md:text-2xl uppercase mb-4 md:mb-6 text-white text-center">
+            <h3
+              className="text-xl md:text-2xl uppercase mb-4 md:mb-6 text-center"
+              style={{
+                color:
+                  methods[index].background === "#FFFFFF"
+                    ? "#333333"
+                    : "#FFFFFF",
+              }}
+            >
               HOW WE DO THEM
             </h3>
             <div className="self-start">
               <Image
-                src={content[index].icon}
+                src={methods[index].icon}
                 width={60}
                 height={50}
-                alt={content[index].title}
+                alt={methods[index].title}
                 className="mb-4 md:w-[80px] md:h-[60px]"
               />
             </div>
             <div className="mb-44">
-              <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-white">
-                {content[index].title}
+              <h2
+                className="text-xl md:text-2xl font-semibold mb-3 md:mb-4"
+                style={{
+                  color:
+                    methods[index].background === "#FFFFFF"
+                      ? "#333333"
+                      : "#FFFFFF",
+                }}
+              >
+                {methods[index].title}
               </h2>
-              <p className="text-xs md:text-sm max-w-xs text-white">
-                {content[index].description}
+              <p
+                className="text-xs md:text-sm max-w-xs"
+                style={{
+                  color:
+                    methods[index].background === "#FFFFFF"
+                      ? "#333333"
+                      : "#FFFFFF",
+                }}
+              >
+                {methods[index].description}
               </p>
             </div>
           </motion.div>
@@ -146,18 +216,26 @@ export default function Services() {
         <div className="absolute bottom-5 left-0 right-0 flex justify-between px-6 md:px-10">
           <button
             onClick={handlePrev}
-            className="p-2 md:p-3 bg-white/20 rounded-full"
+            className={`p-2 md:p-3 ${
+              methods[index].background === "#FFFFFF"
+                ? "bg-black/20"
+                : "bg-white/20"
+            }  rounded-full`}
           >
-            <FaArrowLeft color="white" />
+            <FaArrowLeft color={"#FFFFFF"} />
           </button>
           <button
             onClick={handleNext}
-            className="p-2 md:p-3 bg-white/20 rounded-full"
+            className={`p-2 md:p-3 ${
+              methods[index].background === "#FFFFFF"
+                ? "bg-black/20"
+                : "bg-white/20"
+            }  rounded-full`}
           >
-            <FaArrowRight color="white" />
+            <FaArrowRight color={"#FFFFFF"} />
           </button>
         </div>
-      </div>
+      </div>{" "}
     </section>
   );
 }
