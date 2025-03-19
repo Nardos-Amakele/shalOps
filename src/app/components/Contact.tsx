@@ -4,7 +4,7 @@ import {FaMapMarker} from 'react-icons/fa'
 
 const Contact = () => {
     return (
-      <section id="contact" className="max-w-7xl mx-auto px-20 py-24 space-y-6 text-center bg-[]">
+      <section id="contact" className="max-w-7xl mx-auto px-20 py-24 space-y-6 text-center bg-[]" >
         <h1 className="text-3xl font-bold">Let's help your business thrive</h1>
         <p>Send us your email and we will get back to you</p>
         <form className="flex gap-4 justify-center">
