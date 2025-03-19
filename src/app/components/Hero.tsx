@@ -21,7 +21,7 @@ const Hero = () => {
           <input
             type="text"
             placeholder="Type your email or Phone Number"
-            className="px-4 py-3 w-full md:w-auto rounded-lg border border-gray-300 bg-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="px-4 py-3 w-full md:w-auto rounded-lg border border-gray-300 bg-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 scrolling-placeholder"
           />
           <button className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90">
             Get In Touch
@@ -38,3 +38,17 @@ const Hero = () => {
 };
 
 export default Hero;
+
+<style jsx>{`
+  @keyframes scrollPlaceholder {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .scrolling-placeholder::placeholder {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollPlaceholder 10s linear infinite;
+  }
+`}</style>

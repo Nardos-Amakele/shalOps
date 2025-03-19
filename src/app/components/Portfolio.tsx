@@ -30,7 +30,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <section className="max-w-7xl mx-auto px-20 py-24 text-center ">
+    <section className="max-w-7xl mx-auto px-20 py-24 text-center" id='portfolio'>
       {/* Icon */}
       <div className="flex justify-center mb-6">
       <Image src={PortfolioIcon} className='w-24' alt='portfolio-icon'></Image>
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <div className="flex flex-wrap gap-24 justify-center">
         {projects.map((project, index) => (
-          <div key={index} className="bg-[#B3A5D0] shadow-lg rounded-lg overflow-hidden w-80">
+          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden w-96">
             <Image
               src={project.image}
               alt={project.title}
