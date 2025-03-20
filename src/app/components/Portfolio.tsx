@@ -8,29 +8,29 @@ import project2 from '../../../public/magna.svg'
 const projects = [
   {
     title: 'Robifitness.com',
-    description: 'A brief description of project one, highlighting key aspects.',
+    description: 'A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.',
     image: project1,
   },
   {
     title: 'magna.com',
-    description: 'A brief description of project two, showcasing its uniqueness.',
+    description: 'A brief description of project two, showcasing its uniqueness. A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.',
     image: project2,
   },
   {
     title: 'magna.com',
-    description: 'A brief description of project three, illustrating its impact.',
+    description: 'A brief description of project three, illustrating its impact. A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.',
     image: project2,
   },
   {
     title: 'Robifitness.com',
-    description: 'A brief description of project four, detailing its innovations.',
+    description: 'A brief description of project four, detailing its innovations. A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.',
     image:project1,
   },
 ];
 
 export default function ProjectsPage() {
   return (
-    <section className="max-w-7xl mx-auto px-20 py-24 text-center" id='portfolio'>
+    <section className="max-w-7xl mx-auto px-4 md:px-20 py-24 text-center" id='portfolio'>
       {/* Icon */}
       <div className="flex justify-center mb-6">
       <Image src={PortfolioIcon} className='w-24' alt='portfolio-icon'></Image>
@@ -45,13 +45,13 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <div className="flex flex-wrap gap-24 justify-center">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden w-96">
+          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden w-[30rem]">
             <Image
               src={project.image}
               alt={project.title}
               width={300}
               height={200}
-              className="w-full object-cover"
+              className="w-full object-cover p-5"
             />
             <div className="p-5">
               <h3 className="text-xl font-semibold mb-2 text-left">{project.title}</h3>

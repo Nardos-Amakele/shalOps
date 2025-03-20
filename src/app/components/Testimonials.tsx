@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
         We are a team of passionate innovators, problem-solvers, and technology enthusiasts dedicated to helping businesses thrive in the digital world.
       </p>
       <div className='flex flex-col sm:flex-row gap-8 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%, black_75%,transparent)] max-h-[40rem]'>
-          <TestimonialColumn testimonials={firstColumn} duration={15} className='' />
+          <TestimonialColumn testimonials={firstColumn} duration={15} className='h-[40rem] md:h-' />
           <TestimonialColumn testimonials={secondColumn} duration={20} className='hidden md:block' />
           <TestimonialColumn testimonials={thirdColumn} duration={25} className='hidden lg:block' />
       </div>
