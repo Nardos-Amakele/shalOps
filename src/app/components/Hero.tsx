@@ -1,9 +1,8 @@
-'use client'
-import Image from 'next/image';
-import Herosvg from '../../../public/hero.svg';
+"use client";
+import Image from "next/image";
+import Herosvg from "../../../public/hero.svg";
 
 const Hero = () => {
-
   return (
     <section className="h-screen flex flex-col lg:flex-row mt-[5rem] justify-between px-8 md:px-16 lg:px-24  max-w-7xl mx-auto">
       {/* Left Side */}
@@ -13,7 +12,9 @@ const Hero = () => {
           <span className="text-black">Business & Technology</span>
         </h1>
         <p className="mt-4 text-gray-600 text-lg">
-          We create reliable business solutions tailored to your needs. By understanding your challenges, we build technology that streamlines operations, boosts growth, and drives success.
+          We create reliable business solutions tailored to your needs. By
+          understanding your challenges, we build technology that streamlines
+          operations, boosts growth, and drives success.
         </p>
 
         {/* Input and Button */}
@@ -41,9 +42,15 @@ export default Hero;
 
 <style jsx>{`
   @keyframes scrollPlaceholder {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   .scrolling-placeholder::placeholder {
@@ -51,4 +58,4 @@ export default Hero;
     white-space: nowrap;
     animation: scrollPlaceholder 10s linear infinite;
   }
-`}</style>
+`}</style>;
