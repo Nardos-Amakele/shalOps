@@ -5,13 +5,13 @@ import { Jost } from "next/font/google";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["100", "200", "300", "400", "700"],
   variable: "--font-joseph-sans",
 });
 
 const Jostt = Jost({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-joseph-sans",
 });
 

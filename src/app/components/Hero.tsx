@@ -4,21 +4,21 @@ import Herosvg from "../../../public/hero.svg";
 
 const Hero = () => {
   return (
-    <section className="h-screen flex flex-col lg:flex-row mt-[5rem] justify-between px-8 md:px-16 lg:px-24  max-w-7xl mx-auto">
+    <section className="h-screen flex flex-col lg:flex-row mt-[5rem] justify-between px-8 md:px-16 lg:px-24  max-w-7xl mx-auto items-center lg:items-start">
       {/* Left Side */}
       <div className="max-w-lg text-center lg:text-left">
         <h1 className="text-4xl md:text-5xl font-bold leading-tight">
           Bridging <br />
           <span className="text-black">Business & Technology</span>
         </h1>
-        <p className="mt-4 text-gray-600 text-lg">
+        <p className="mt-4 font-light  text-xl">
           We create reliable business solutions tailored to your needs. By
           understanding your challenges, we build technology that streamlines
           operations, boosts growth, and drives success.
         </p>
 
         {/* Input and Button */}
-        <div className="mt-6 flex flex-col md:flex-row gap-4">
+        <div className="mt-6 flex font-light text-lg flex-col md:flex-row gap-4">
           <input
             type="text"
             placeholder="Type your email or Phone Number"
@@ -39,23 +39,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-<style jsx>{`
-  @keyframes scrollPlaceholder {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  .scrolling-placeholder::placeholder {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scrollPlaceholder 10s linear infinite;
-  }
-`}</style>;
