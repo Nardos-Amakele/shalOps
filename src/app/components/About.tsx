@@ -8,7 +8,7 @@ import Gears from "../../../public/Group 33.svg";
 export default function AboutUs() {
   return (
     <section
-      className=" mt-64 md:mt-0  min-h-screen flex flex-col items-center px-6 md:px-52 py-10  mx-auto max-w-7xl"
+      className=" mt-64 md:mt-0  min-h-screen flex flex-col items-center px-6 md:px-52 py-10 lg:py-5  mx-auto max-w-7xl"
       id="about"
     >
       {/* <svg
