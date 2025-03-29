@@ -4,43 +4,41 @@ import PortfolioIcon from "../../../public/portfolio-svgrepo-com.svg";
 import project1 from "../../../public/robi.svg";
 import project2 from "../../../public/magna.svg";
 import Link from "next/link";
+import { useRouter } from "next/navigation"; // Import useRouter for navigation
 
 const projects = [
   {
     title: "Robifitness.com",
     description:
-      "A premium gym website with stunning UI/UX design, fully responsive across all devices. Features include member management, class scheduling, and e-commerce integration. The modern interface delivers seamless user experience with intuitive navigation and engaging visuals.",
+      "A premium gym website with stunning UI/UX design, fully responsive across all devices. Features include member management, class scheduling, and e-commerce integration.",
     image: project1,
     url: "https://www.robifitness.com",
   },
   {
     title: "magna.com",
     description:
-      "An event management platform showcasing diverse events with ticketing and booking features. The website enables event organizers to manage schedules, sell tickets, and promote events through an integrated marketing system.",
-
+      "An event management platform showcasing diverse events with ticketing and booking features.",
     image: project2,
     url: "https://magna.com",
-
   },
   {
     title: "magna.com",
-    description:
-      "A brief description of project three, illustrating its impact. A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.A brief description of project one, highlighting key aspects.",
+    description: "A brief description of project three, illustrating its impact.",
     image: project2,
     url: "https://www.robifitness.com",
-
   },
   {
     title: "demo.Robifitness.com",
     description:
-      "Demo version of the Robifitness management system featuring all core modules including member portal, staff management, inventory control, and retail shop integration. Demonstrates the full system capabilities.",
+      "Demo version of the Robifitness management system featuring all core modules including member portal, staff management, inventory control, and retail shop integration.",
     image: project1,
     url: "https://demo.robifitness.com/",
-
   },
 ];
 
 export default function ProjectsPage() {
+  const router = useRouter(); // Next.js router for navigation
+
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-20 py-24 text-center" id="portfolio">
       {/* Icon */}
@@ -49,12 +47,9 @@ export default function ProjectsPage() {
       </div>
 
       {/* Header */}
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">
-        Some of What We Have Done
-      </h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Some of What We Have Done</h2>
       <p className="text-black max-w-2xl font-light mx-auto mb-12">
-        Here are some of our projects, showcasing our commitment to innovation,
-        excellence, and delivering high-quality solutions.
+        Here are some of our projects, showcasing our commitment to innovation and excellence.
       </p>
 
       {/* Projects Grid */}
@@ -62,7 +57,8 @@ export default function ProjectsPage() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-[30rem] transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]"
+            className="group bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-[30rem] transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] cursor-pointer"
+            onClick={() => router.push(project.url)} // Make the whole card clickable
           >
             <div className="relative overflow-hidden">
               <Image
@@ -80,13 +76,15 @@ export default function ProjectsPage() {
               <p className="text-gray-600 text-sm sm:text-base text-left font-light">
                 {project.description}
               </p>
-              <div className="mt-4 relative z-20"> {/* z-20 to appear above the link layer */}
+
+              {/* View Project Button - Only visible on larger screens */}
+              <div className="mt-4 hidden sm:block">
                 <Link
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 text-sm border border-[#8C52FF] text-[#8C52FF] rounded-md hover:bg-gradient-to-r hover:from-[#8C52FF] hover:to-[#160E23] hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100"
-                  onClick={(e) => e.stopPropagation()}
+                  className="inline-block px-4 py-2 text-sm border border-[#8C52FF] text-[#8C52FF] rounded-md hover:bg-gradient-to-r hover:from-[#8C52FF] hover:to-[#160E23] hover:text-white transition-all duration-300"
+                  onClick={(e) => e.stopPropagation()} // Prevents the full card click from triggering when clicking this button
                 >
                   View Project
                 </Link>
