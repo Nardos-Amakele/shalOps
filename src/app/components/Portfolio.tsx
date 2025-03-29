@@ -19,7 +19,7 @@ const projects = [
     description:
       "An event management platform showcasing diverse events with ticketing and booking features.",
     image: project2,
-    url: "https://magna.com",
+    url: "https://magna-yonathanth-yonathanths-projects.vercel.app/",
   },
   {
     title: "magna.com",
