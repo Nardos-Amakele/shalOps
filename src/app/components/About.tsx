@@ -8,7 +8,7 @@ import Gears from "../../../public/Group 33.svg";
 export default function AboutUs() {
   return (
     <section
-      className=" mt-64 md:mt-0  min-h-screen flex flex-col items-center px-6 md:px-52 py-10 lg:py-5  mx-auto max-w-7xl"
+      className=" mt-24 md:mt-0  min-h-screen flex flex-col items-center px-6 md:px-52 py-10 lg:py-5  mx-auto max-w-7xl"
       id="about"
     >
       {/* <svg
@@ -28,8 +28,8 @@ export default function AboutUs() {
         {/* WHO WE ARE */}
         <div className="flex flex-col md:flex-row justify-between items-center ">
           <div className="md:w-1/2 text-left">
-            <h2 className="text-3xl font-bold mb-5">WHO WE ARE</h2>
-            <p className="">
+            <h2 className="text-lg sm:text-3xl font-bold mb-5">WHO WE ARE</h2>
+            <p className="font-light text-sm sm:text-lg">
               We are a team of passionate innovators, problem-solvers, and
               technology enthusiasts dedicated to helping businesses thrive in
               the digital world. Our mission is to bridge the gap between
@@ -44,8 +44,8 @@ export default function AboutUs() {
         {/* WHAT WE DO */}
         <div className="flex flex-col md:flex-row-reverse items-center  ">
           <div className="md:w-1/2 text-left md:text-right">
-            <h2 className="text-3xl font-bold mb-5">WHAT WE DO</h2>
-            <p className="">
+            <h2 className="text-lg sm:text-3xl font-bold mb-5">WHAT WE DO</h2>
+            <p className="font-light text-sm sm:text-lg">
               We are a team of passionate innovators, problem-solvers, and
               technology enthusiasts dedicated to helping businesses thrive in
               the digital world. Our mission is to bridge the gap between
@@ -65,8 +65,10 @@ export default function AboutUs() {
         {/* WHAT MAKES US DIFFERENT */}
         <div className="flex flex-col md:flex-row items-center mb-14 ">
           <div className="md:w-1/2 text-left">
-            <h2 className="text-3xl font-bold mb-5">WHAT MAKES US DIFFERENT</h2>
-            <p className="">
+            <h2 className="text-lg sm:text-3xl font-bold mb-5">
+              WHAT MAKES US DIFFERENT
+            </h2>
+            <p className="font-light text-sm sm:text-lg">
               We are a team of passionate innovators, problem-solvers, and
               technology enthusiasts dedicated to helping businesses thrive in
               the digital world. Our mission is to bridge the gap between

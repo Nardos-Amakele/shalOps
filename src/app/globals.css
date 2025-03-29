@@ -95,3 +95,13 @@ body {
   top: 0;
   width: 70%;
 }
+/* djkj */
+/* Add this at the top of your globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Add this if you want to prevent scroll jumps */
+html.has-scroll-smooth {
+  overflow: hidden;
+}

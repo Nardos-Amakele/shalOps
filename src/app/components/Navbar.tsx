@@ -41,7 +41,7 @@ const Navbar = () => {
           </li>
           <li>
             <button className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90">
-              Contact
+             <a href="#contact"> Contact</a>
             </button>
           </li>
         </ul>

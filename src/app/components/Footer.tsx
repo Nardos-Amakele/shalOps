@@ -15,17 +15,17 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold mb-2">Company</h4>
               <ul className="space-y-1">
-                <li><a href="#" className="hover:underline">About us</a></li>
-                <li><a href="#" className="hover:underline">Portfolio</a></li>
-                <li><a href="#" className="hover:underline">Contact</a></li>
+                <li><a href="#about" className="hover:underline">About us</a></li>
+                <li><a href="#portfolio" className="hover:underline">Portfolio</a></li>
+                <li><a href="#contact" className="hover:underline">Contact</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-2">Service</h4>
               <ul className="space-y-1">
-                <li><a href="#" className="hover:underline">Systems Development</a></li>
-                <li><a href="#" className="hover:underline">App Development</a></li>
-                <li><a href="#" className="hover:underline">Web Design</a></li>
+                <li><a href="#portfolio" className="hover:underline">Systems Development</a></li>
+                <li><a href="#portfolio" className="hover:underline">App Development</a></li>
+                <li><a href="#portfolio" className="hover:underline">Web Design</a></li>
               </ul>
             </div>
           </div>
