@@ -17,11 +17,11 @@ export default function Home() {
           <Hero />
         </ScrollWrapper>
         
-        <ScrollWrapper delay={0.1}>
+        <ScrollWrapper delay={0.2}>
           <About />
         </ScrollWrapper>
         
-        <ScrollWrapper delay={0.2}>
+        <ScrollWrapper delay={0.3}>
           <Services />
         </ScrollWrapper>
         
@@ -33,7 +33,7 @@ export default function Home() {
           <Testimonials />
         </ScrollWrapper>
         
-        <ScrollWrapper delay={0.5}>
+        <ScrollWrapper delay={0.4}>
           <Contact />
         </ScrollWrapper>
       </main>

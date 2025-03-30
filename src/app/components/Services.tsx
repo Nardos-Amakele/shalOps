@@ -139,173 +139,74 @@ export default function Services() {
 
       {/* Right Section */}
       <div className="relative w-full md:w-1/3 min-h-screen flex items-center justify-center">
-        {/* Background */}
-        <motion.div
+        {/* Current Content */}
+        <div
           className="absolute inset-0 flex flex-col justify-between p-6 md:p-10 w-full h-full"
-          style={{ backgroundColor: methods[prevIndex].background }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          style={{
+            backgroundColor: methods[index].background,
+            transition: 'background-color 0.8s ease'
+          }}
         >
-          <motion.h3
+          <h3
             className="text-xl md:text-2xl uppercase mb-4 md:mb-6 text-center"
             style={{
-              color:
-                methods[prevIndex].background === "#FFFFFF"
-                  ? "#333333"
-                  : "#FFFFFF",
+              color: methods[index].background === "#FFFFFF" ? "#333333" : "#FFFFFF",
             }}
-            initial={{ y: -20 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.4 }}
           >
             HOW WE DO THEM
-          </motion.h3>
-          <motion.div
-            className="self-start"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.4 }}
-          >
+          </h3>
+
+          <div className="self-start">
             <Image
-              src={methods[prevIndex].icon}
+              src={methods[index].icon}
               width={60}
               height={50}
-              alt={methods[prevIndex].title}
+              alt={methods[index].title}
               className="mb-4 md:w-[80px] md:h-[60px]"
             />
-          </motion.div>
-          <motion.div
-            className="mb-44"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-          >
+          </div>
+
+          <div className="mb-44">
             <h2
               className="text-xl md:text-2xl font-semibold mb-3 md:mb-4"
               style={{
-                color:
-                  methods[prevIndex].background === "#FFFFFF"
-                    ? "#333333"
-                    : "#FFFFFF",
+                color: methods[index].background === "#FFFFFF" ? "#333333" : "#FFFFFF",
               }}
             >
-              {methods[prevIndex].title}
+              {methods[index].title}
             </h2>
             <p
               className="text-xs md:text-sm max-w-xs"
               style={{
-                color:
-                  methods[prevIndex].background === "#FFFFFF"
-                    ? "#333333"
-                    : "#FFFFFF",
+                color: methods[index].background === "#FFFFFF" ? "#333333" : "#FFFFFF",
               }}
             >
-              {methods[prevIndex].description}
+              {methods[index].description}
             </p>
-          </motion.div>
-        </motion.div>
-
-        {/* Foreground */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            className="absolute inset-0 flex flex-col justify-between p-6 md:p-10 w-full h-full"
-            style={{ backgroundColor: methods[index].background }}
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <motion.h3
-              className="text-xl md:text-2xl uppercase mb-4 md:mb-6 text-center"
-              style={{
-                color:
-                  methods[index].background === "#FFFFFF"
-                    ? "#333333"
-                    : "#FFFFFF",
-              }}
-              initial={{ y: -20 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-            >
-              HOW WE DO THEM
-            </motion.h3>
-            <motion.div
-              className="self-start"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-            >
-              <Image
-                src={methods[index].icon}
-                width={60}
-                height={50}
-                alt={methods[index].title}
-                className="mb-4 md:w-[80px] md:h-[60px]"
-              />
-            </motion.div>
-            <motion.div
-              className="mb-44"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-            >
-              <h2
-                className="text-xl md:text-2xl font-semibold mb-3 md:mb-4"
-                style={{
-                  color:
-                    methods[index].background === "#FFFFFF"
-                      ? "#333333"
-                      : "#FFFFFF",
-                }}
-              >
-                {methods[index].title}
-              </h2>
-              <p
-                className="text-xs md:text-sm max-w-xs"
-                style={{
-                  color:
-                    methods[index].background === "#FFFFFF"
-                      ? "#333333"
-                      : "#FFFFFF",
-                }}
-              >
-                {methods[index].description}
-              </p>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Navigation Arrows */}
-        <motion.div
-          className="absolute bottom-5 left-0 right-0 flex justify-between px-6 md:px-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-          <motion.button
+        <div className="absolute bottom-5 left-0 right-0 flex justify-between px-6 md:px-10">
+          <button
             onClick={handlePrev}
             className={`p-2 md:p-3 ${methods[index].background === "#FFFFFF"
               ? "bg-black/20"
               : "bg-white/20"
-              }  rounded-full`}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+              } rounded-full transition-transform hover:scale-110 active:scale-95`}
           >
             <FaArrowLeft color={"#FFFFFF"} />
-          </motion.button>
-          <motion.button
+          </button>
+          <button
             onClick={handleNext}
             className={`p-2 md:p-3 ${methods[index].background === "#FFFFFF"
               ? "bg-black/20"
               : "bg-white/20"
-              }  rounded-full`}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+              } rounded-full transition-transform hover:scale-110 active:scale-95`}
           >
             <FaArrowRight color={"#FFFFFF"} />
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
       </div>
     </motion.section>
   );
