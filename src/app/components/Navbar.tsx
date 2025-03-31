@@ -41,7 +41,7 @@ const Navbar = () => {
           </li>
           <li>
             <button className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90">
-             <a href="#contact"> Contact</a>
+              <a href="#contact"> Contact</a>
             </button>
           </li>
         </ul>
@@ -96,9 +96,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <button className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90">
+              <a
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+                className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90"
+              >
                 Contact
-              </button>
+              </a>
             </li>
           </ul>
         </div>
