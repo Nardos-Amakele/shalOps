@@ -70,7 +70,7 @@ export default function ProjectsPage() {
               />
             </div>
             <div className="p-6 group-hover:bg-gray-50 transition-colors duration-300">
-              <h3 className="text-xl font-semibold mb-3 text-left text-gray-800 group-hover:text-[#8C52FF] transition-colors duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-left text-gray-800 group-hover:text-[#563589] transition-colors duration-300">
                 {project.title}
               </h3>
               <p className="text-gray-600 text-sm sm:text-base text-left font-light">
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 text-sm border border-[#8C52FF] text-[#8C52FF] rounded-md hover:bg-gradient-to-r hover:from-[#8C52FF] hover:to-[#160E23] hover:text-white transition-all duration-300"
+                  className="inline-block px-4 py-2 text-sm border border-[#8C52FF] text-[#8C52FF] rounded-md hover:bg-gradient-to-r hover:from-[#8C52FF]  hover:to-[#160E23] hover:text-white transition-all duration-300"
                   onClick={(e) => e.stopPropagation()} // Prevents the full card click from triggering when clicking this button
                 >
                   View Project
