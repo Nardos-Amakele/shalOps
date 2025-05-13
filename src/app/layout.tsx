@@ -16,7 +16,7 @@ const Jostt = Jost({
 
 export const metadata = {
   title: "ShalOps - Digital Solutions Provider",
-  description: "Modern, responsive digital solutions for your business",
+  description: "Modern, custom digital solutions for your business",
 };
 
 export default function RootLayout({
