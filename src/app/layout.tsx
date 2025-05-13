@@ -1,5 +1,4 @@
-import ParticlesBackground from './components/ParticlesBackground';
-import './globals.css';
+import "./globals.css";
 import { Josefin_Sans } from "next/font/google";
 import { Jost } from "next/font/google";
 
@@ -15,19 +14,20 @@ const Jostt = Jost({
   variable: "--font-joseph-sans",
 });
 
-
 export const metadata = {
-  title: 'ShalOps - Digital Solutions Provider',
-  description: 'Modern, responsive digital solutions for your business',
+  title: "ShalOps - Digital Solutions Provider",
+  description: "Modern, responsive digital solutions for your business",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${josefinSans.variable} ${Jostt.variable}`}>
       <head></head>
-      <body className={`${josefinSans.className}`}>
-        {children}
-      </body>
+      <body className={`${josefinSans.className}`}>{children}</body>
     </html>
   );
 }

@@ -1,38 +1,42 @@
 "use client";
 import Image from "next/image";
 import PortfolioIcon from "../../../public/portfolio-svgrepo-com.svg";
+import ecp from "../../../public/ecp.png";
+import magna from "../../../public/magna.png";
+import brukti from "../../../public/brukti.png";
 import project1 from "../../../public/robi.svg";
-import project2 from "../../../public/magna.svg";
 import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import useRouter for navigation
 
 const projects = [
   {
-    title: "Robifitness.com",
-    description:
-      "A premium gym website with stunning UI/UX design, fully responsive across all devices. Features include member management, class scheduling, and e-commerce integration.",
-    image: project1,
-    url: "https://www.robifitness.com",
-  },
-  {
-    title: "magna.com",
-    description:
-      "An event management platform showcasing diverse events with ticketing and booking features.",
-    image: project2,
-    url: "https://magna-yonathanth-yonathanths-projects.vercel.app/",
-  },
-  {
-    title: "magna.com",
-    description: "A brief description of project three, illustrating its impact.",
-    image: project2,
-    url: "https://www.robifitness.com",
-  },
-  {
     title: "demo.Robifitness.com",
     description:
-      "Demo version of the Robifitness management system featuring all core modules including member portal, staff management, inventory control, and retail shop integration.",
+      "End-to-end gym automation: Our software natively integrates with leading access control systems, website  with registration, and optional user-end features.",
     image: project1,
     url: "https://demo.robifitness.com/",
+  },
+  {
+    title: "ethiocollegeprep.com",
+    description:
+      "Ethio College Prep (ECP) is an educational consultancy that helps Ethiopian high school students prepare for and apply to colleges abroad, primarily in the US and Canada.",
+    image: ecp,
+    url: "https://www.ethiocollegeprep.com/",
+  },
+
+  {
+    title: "magna.com",
+    description:
+      "A stunning portfolio website showcasing Magna’s most impactful events and marketing campaigns – designed to convert visitors into clients with immersive galleries, case studies, and effortless inquiry features.",
+    image: magna,
+    url: "https://magnaplc.com/",
+  },
+  {
+    title: "bruktishopping.com",
+    description:
+      "An Ecommerce website for an influencer showcasing a variety of products, including clothing.",
+    image: brukti,
+    url: "https://bruktishopping.com/",
   },
 ];
 
@@ -40,16 +44,22 @@ export default function ProjectsPage() {
   const router = useRouter(); // Next.js router for navigation
 
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-20 py-24 text-center" id="portfolio">
+    <section
+      className="max-w-7xl mx-auto px-4 md:px-20 py-24 text-center"
+      id="portfolio"
+    >
       {/* Icon */}
       <div className="flex justify-center mb-6">
         <Image src={PortfolioIcon} className="w-24" alt="portfolio-icon" />
       </div>
 
       {/* Header */}
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Some of What We Have Done</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        Some of What We Have Done
+      </h2>
       <p className="text-black max-w-2xl font-light mx-auto mb-12">
-        Here are some of our projects, showcasing our commitment to innovation and excellence.
+        Here are some of our projects, showcasing our commitment to innovation
+        and excellence.
       </p>
 
       {/* Projects Grid */}

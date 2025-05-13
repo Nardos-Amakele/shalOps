@@ -46,10 +46,10 @@ export default function AboutUs() {
           <div className="md:w-1/2 text-left md:text-right">
             <h2 className="text-lg sm:text-3xl font-bold mb-5">WHAT WE DO</h2>
             <p className="font-light text-sm sm:text-lg">
-              We are a team of passionate innovators, problem-solvers, and
-              technology enthusiasts dedicated to helping businesses thrive in
-              the digital world. Our mission is to bridge the gap between
-              business.
+              We design and deliver cutting-edge integrated software solutions
+              that streamline operations, enhance productivity, and drive
+              growth. From automation to AI-powered tools, we help businesses
+              stay ahead in a fast-evolving digital landscape.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center mt-4 md:mt-0">
@@ -69,10 +69,11 @@ export default function AboutUs() {
               WHAT MAKES US DIFFERENT
             </h2>
             <p className="font-light text-sm sm:text-lg">
-              We are a team of passionate innovators, problem-solvers, and
-              technology enthusiasts dedicated to helping businesses thrive in
-              the digital world. Our mission is to bridge the gap between
-              business.
+              Unlike traditional providers, we combine deep industry knowledge
+              with agile development to create tailor-made solutions. Our
+              customer-first approach ensures seamless integration, ongoing
+              support, and measurable results—because your success is our
+              priority.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center mt-4 md:mt-0">

@@ -6,7 +6,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import Research from "../../../public/research-presentation-svgrepo-com (1).svg";
 import Development from "../../../public/development-web-development-svgrepo-com (1) (1).svg";
 import Support from "../../../public/Group.svg";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const content = [
   {
@@ -64,15 +64,12 @@ const methods = [
 ];
 export default function Services() {
   const [index, setIndex] = useState(0);
-  const [prevIndex, setPrevIndex] = useState(0);
 
   const handleNext = () => {
-    setPrevIndex(index);
     setIndex((prev) => (prev + 1) % methods.length);
   };
 
   const handlePrev = () => {
-    setPrevIndex(index);
     setIndex((prev) => (prev - 1 + methods.length) % methods.length);
   };
 
@@ -110,7 +107,8 @@ export default function Services() {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            We craft tailored digital solutions that elevate businesses through technology.
+            We craft tailored digital solutions that elevate businesses through
+            technology.
           </motion.p>
         </div>
         <motion.div
@@ -144,13 +142,14 @@ export default function Services() {
           className="absolute inset-0 flex flex-col justify-between p-6 md:p-10 w-full h-full"
           style={{
             backgroundColor: methods[index].background,
-            transition: 'background-color 0.8s ease'
+            transition: "background-color 0.8s ease",
           }}
         >
           <h3
             className="text-xl md:text-2xl uppercase mb-4 md:mb-6 text-center"
             style={{
-              color: methods[index].background === "#FFFFFF" ? "#333333" : "#FFFFFF",
+              color:
+                methods[index].background === "#FFFFFF" ? "#333333" : "#FFFFFF",
             }}
           >
             HOW WE DO THEM
@@ -170,7 +169,10 @@ export default function Services() {
             <h2
               className="text-xl md:text-2xl font-semibold mb-3 md:mb-4"
               style={{
-                color: methods[index].background === "#FFFFFF" ? "#333333" : "#FFFFFF",
+                color:
+                  methods[index].background === "#FFFFFF"
+                    ? "#333333"
+                    : "#FFFFFF",
               }}
             >
               {methods[index].title}
@@ -178,7 +180,10 @@ export default function Services() {
             <p
               className="text-xs md:text-sm max-w-xs"
               style={{
-                color: methods[index].background === "#FFFFFF" ? "#333333" : "#FFFFFF",
+                color:
+                  methods[index].background === "#FFFFFF"
+                    ? "#333333"
+                    : "#FFFFFF",
               }}
             >
               {methods[index].description}
@@ -190,19 +195,21 @@ export default function Services() {
         <div className="absolute bottom-5 left-0 right-0 flex justify-between px-6 md:px-10">
           <button
             onClick={handlePrev}
-            className={`p-2 md:p-3 ${methods[index].background === "#FFFFFF"
-              ? "bg-black/20"
-              : "bg-white/20"
-              } rounded-full transition-transform hover:scale-110 active:scale-95`}
+            className={`p-2 md:p-3 ${
+              methods[index].background === "#FFFFFF"
+                ? "bg-black/20"
+                : "bg-white/20"
+            } rounded-full transition-transform hover:scale-110 active:scale-95`}
           >
             <FaArrowLeft color={"#FFFFFF"} />
           </button>
           <button
             onClick={handleNext}
-            className={`p-2 md:p-3 ${methods[index].background === "#FFFFFF"
-              ? "bg-black/20"
-              : "bg-white/20"
-              } rounded-full transition-transform hover:scale-110 active:scale-95`}
+            className={`p-2 md:p-3 ${
+              methods[index].background === "#FFFFFF"
+                ? "bg-black/20"
+                : "bg-white/20"
+            } rounded-full transition-transform hover:scale-110 active:scale-95`}
           >
             <FaArrowRight color={"#FFFFFF"} />
           </button>

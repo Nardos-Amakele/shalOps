@@ -1,63 +1,62 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Clients from "../../../public/users-svgrepo-com.svg";
 import Image from "next/image";
 import React from "react";
 
 const testimonials = [
   {
-    id: 1,
-    name: "Robel Getahun",
-    text: "Shalops transformed our gym management - their system handles everything from members to inventory perfectly.",
+    id: 10,
+    name: "Dr. Musse Demisse (Magna PLC)",
+    text: "Our portfolio website now perfectly represents our brand's professionalism - thanks to Shalops' design.",
     imageSrc: "../../../public/avatr.jpeg",
   },
   {
-    id: 2,
-    name: "Alemu Tadesse",
-    text: "The website Shalops built for our events business has brought us 3x more bookings. Game changing!",
+    id: 11,
+    name: "Dagmawi Getye",
+    text: "The Telegram bot Shalops created streamlined my tutoring registrations, saving me hours every week.",
     imageSrc: "../../../public/avatr.jpeg",
   },
   {
-    id: 3,
-    name: "Marta Kebede",
-    text: "From design to development, Shalops delivered exactly what we needed on time and on budget.",
+    id: 12,
+    name: "Yohannes (Shape Up Gym)",
+    text: "Since implementing Shalops' gym system, our operations have never been smoother or more efficient.",
     imageSrc: "../../../public/avatr.jpeg",
   },
   {
-    id: 4,
-    name: "Samuel Bekele",
-    text: "Their team solved problems we didn't even know we had. The mobile app works flawlessly.",
+    id: 10,
+    name: "Dr. Musse Demisse (Magna PLC)",
+    text: "Our portfolio website now perfectly represents our brand's professionalism - thanks to Shalops' design.",
     imageSrc: "../../../public/avatr.jpeg",
   },
   {
-    id: 5,
-    name: "Liya Abebe",
-    text: "We've worked with many developers - Shalops stands out for their creativity and reliability.",
+    id: 11,
+    name: "Dagmawi Getye",
+    text: "The Telegram bot Shalops created streamlined my tutoring registrations, saving me hours every week.",
     imageSrc: "../../../public/avatr.jpeg",
   },
   {
-    id: 6,
-    name: "Tewodros Assefa",
-    text: "The custom dashboard they built gives us real-time business insights we never had before.",
+    id: 12,
+    name: "Yohannes (Shape Up Gym)",
+    text: "Since implementing Shalops' gym system, our operations have never been smoother or more efficient.",
     imageSrc: "../../../public/avatr.jpeg",
   },
   {
-    id: 7,
-    name: "Hana Mohammed",
-    text: "Our members love the new booking system - it's so much easier to use than our old one.",
+    id: 10,
+    name: "Dr. Musse Demisse (Magna PLC)",
+    text: "Our portfolio website now perfectly represents our brand's professionalism - thanks to Shalops' design.",
     imageSrc: "../../../public/avatr.jpeg",
   },
   {
-    id: 8,
-    name: "Dawit Girma",
-    text: "Shalops didn't just build a website - they helped us rethink our entire digital strategy.",
+    id: 11,
+    name: "Dagmawi Getye",
+    text: "The Telegram bot Shalops created streamlined my tutoring registrations, saving me hours every week.",
     imageSrc: "../../../public/avatr.jpeg",
   },
   {
-    id: 9,
-    name: "Amina Yusuf",
-    text: "The support after launch has been incredible. They truly care about our success.",
+    id: 12,
+    name: "Yohannes (Shape Up Gym)",
+    text: "Since implementing Shalops' gym system, our operations have never been smoother or more efficient.",
     imageSrc: "../../../public/avatr.jpeg",
   },
 ];
@@ -66,15 +65,7 @@ const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 
-const TestimonialCard = ({
-  name,
-  text,
-  imageSrc,
-}: {
-  name: string;
-  text: string;
-  imageSrc: string;
-}) => (
+const TestimonialCard = ({ name, text }: { name: string; text: string }) => (
   <div className="bg-white p-6 rounded-xl shadow-lg w-80 text-center">
     <div className="w-10 h-10 bg-[#8572AA] rounded-full mx-auto mb-4"></div>
     <h3 className="font-semibold">{name}</h3>
@@ -111,19 +102,12 @@ const TestimonialColumn = (props: {
               id,
               name,
               text,
-              imageSrc,
             }: {
               id: number;
               name: string;
               text: string;
-              imageSrc: string;
             }) => (
-              <TestimonialCard
-                key={id}
-                name={name}
-                text={text}
-                imageSrc={imageSrc}
-              />
+              <TestimonialCard key={id} name={name} text={text} />
             )
           )}
         </React.Fragment>
@@ -140,8 +124,8 @@ const TestimonialsSection = () => {
         WHAT OUR CLIENTS SAY ABOUT US
       </h2>
       <p className="font-light  text-center max-w-xl mb-8">
-        We are a team of passionate innovators, problem-solvers, and technology
-        enthusiasts dedicated to helping businesses thrive in the digital world.
+        Don&apos;t just take our word for it—hear from businesses that have
+        transformed their operations with our solutions.
       </p>
       <div className="flex flex-col sm:flex-row gap-8 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%, black_75%,transparent)] max-h-[40rem]">
         <TestimonialColumn
