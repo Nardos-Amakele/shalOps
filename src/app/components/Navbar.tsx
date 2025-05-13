@@ -40,7 +40,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <button className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90">
+            <button className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-sm hover:opacity-90 border border-transparent">
               <a href="#contact"> Contact</a>
             </button>
           </li>
@@ -99,7 +99,7 @@ const Navbar = () => {
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90"
+                className="px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-sm hover:opacity-90 border border-transparent"
               >
                 Contact
               </a>

@@ -25,9 +25,9 @@ const projects = [
   },
 
   {
-    title: "magna.com",
+    title: "magnaplc.com",
     description:
-      "A stunning portfolio website showcasing Magna’s most impactful events and marketing campaigns – designed to convert visitors into clients with immersive galleries, case studies, and effortless inquiry features.",
+      "A stunning portfolio website showcasing Magna's most impactful events and marketing campaigns – designed to convert visitors into clients with immersive galleries, case studies, and effortless inquiry features.",
     image: magna,
     url: "https://magnaplc.com/",
   },
@@ -87,8 +87,8 @@ export default function ProjectsPage() {
                 {project.description}
               </p>
 
-              {/* View Project Button - Only visible on larger screens */}
-              <div className="mt-4 hidden sm:block">
+              {/* View Project Button - visible on all screen sizes */}
+              <div className="mt-4">
                 <Link
                   href={project.url}
                   target="_blank"

@@ -82,7 +82,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting || !email.trim()}
-                className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-md hover:opacity-90 disabled:opacity-70 transition-all duration-200"
+                className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#8C52FF] to-[#160E23] text-white font-semibold rounded-lg shadow-sm hover:opacity-90 disabled:opacity-90 transition-all duration-200 border border-transparent"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center">

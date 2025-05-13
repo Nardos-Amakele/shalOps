@@ -25,7 +25,7 @@ const Promo = () => {
             animation: "textGradient 8s l8inear infinite",
           }}
         >
-          Want the best deal on integrated software? Contact us today{" "}
+          Need a custom software? Contact Us Today .{" "}
           <Link href="#contact" className="ml-2 flex items-center">
             <motion.span whileHover={{ scale: 1.1 }} className="text-white">
               <FaArrowRightLong />
