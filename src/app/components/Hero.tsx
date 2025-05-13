@@ -92,7 +92,7 @@ const Hero = () => {
           >
             Bridging <br />
             <motion.span
-              className="text-black block mt-2"
+              className="text-black block mt-2 "
               variants={fallingText}
             >
               Business & Technology

@@ -45,7 +45,7 @@ export default function ProjectsPage() {
 
   return (
     <section
-      className="max-w-7xl mx-auto px-4 md:px-20 py-24 text-center"
+      className="max-w-7xl mx-auto px-6 md:px-20 py-24 text-center"
       id="portfolio"
     >
       {/* Icon */}

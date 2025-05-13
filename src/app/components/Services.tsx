@@ -192,7 +192,7 @@ export default function Services() {
         </div>
 
         {/* Navigation Arrows */}
-        <div className="absolute bottom-5 left-0 right-0 flex justify-between px-6 md:px-10">
+        <div className="absolute bottom-5 left-0 right-0 flex justify-between px-8 md:px-10">
           <button
             onClick={handlePrev}
             className={`p-2 md:p-3 ${
